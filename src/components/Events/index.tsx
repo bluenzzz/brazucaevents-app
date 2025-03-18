@@ -42,7 +42,7 @@ export function Events() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://189.127.164.179:8600/getPosts`, {
+        const response = await fetch(`http://API:PORT/getPosts`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

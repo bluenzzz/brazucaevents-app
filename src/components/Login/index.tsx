@@ -55,7 +55,7 @@ export function Login() {
       return Alert.alert("Erro", "Senha incompatível.");
 
     const response = await fetch(
-      `http://189.127.164.179:8600/createAccount?name=${name}&email=${email}&password=${password}`,
+      `http://API:PORT/createAccount?name=${name}&email=${email}&password=${password}`,
       {
         method: "GET",
         headers: {
@@ -87,7 +87,7 @@ export function Login() {
       return Alert.alert("Erro", "Senha ou email inválido.");
 
     const response = await fetch(
-      `http://189.127.164.179:8600/loginToAccount?email=${email}&password=${password}`,
+      `http://API:PORT/loginToAccount?email=${email}&password=${password}`,
       {
         method: "GET",
         headers: {
