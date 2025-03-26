@@ -15,7 +15,7 @@ import { usePage } from "../../contexts/PageContext";
 import { styles } from "./styles";
 
 export function Login() {
-  const { setPage, setUsername } = usePage();
+  const { setPage, setUsername, setUserEmail } = usePage();
 
   const [login, setLogin] = useState<boolean>(true);
 
@@ -104,6 +104,7 @@ export function Login() {
           text: "Ok",
           onPress: () => {
             if (data.title === "Sucesso") {
+              setUserEmail(email);
               resetInput();
               setPage("Events");
               setUsername(data.username);

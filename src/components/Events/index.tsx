@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View, Image, Text, FlatList } from "react-native";
+import { View, Image, Text, FlatList, TouchableOpacity } from "react-native";
 
 import { Card } from "../Card";
 import { usePage } from "../../contexts/PageContext";
@@ -124,13 +124,15 @@ export function Events() {
           data={events}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <Card
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              date={item.date}
-              location={item.location}
-            />
+            <TouchableOpacity>
+              <Card
+                key={item.id}
+                title={item.title}
+                image={item.image}
+                date={item.date}
+                location={item.location}
+              />
+            </TouchableOpacity>
           )}
           showsVerticalScrollIndicator={false}
           ListEmptyComponent={() => (
